@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: fz4kgdplf-java-quarkus-gitops
+  description: This is GitOps manifest for fz4kgdplf-java-quarkus   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=fz4kgdplf-java-quarkus
+    backstage.io/kubernetes-id: fz4kgdplf-java-quarkus 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: xjiangorg/fz4kgdplf-java-quarkus-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:fz4kgdplf-java-quarkus
